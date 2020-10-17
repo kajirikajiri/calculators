@@ -5,7 +5,7 @@ type HeaderProps = {
   siteTitle: string
 }
 
-export const Header: React.FC<HeaderProps> = siteTitle => (
+export const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
   <header
     style={{
       background: `rebeccapurple`,
