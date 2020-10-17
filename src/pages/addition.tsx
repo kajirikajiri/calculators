@@ -119,7 +119,13 @@ const Addition = () => {
         }}
       >
         <div>
-          <div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
             <span
               style={{ fontSize: 50, margin: "0 10px 0", color: "transparent" }}
             >
