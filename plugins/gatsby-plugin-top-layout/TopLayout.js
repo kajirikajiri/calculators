@@ -2,7 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import CssBaseline from "@material-ui/core/CssBaseline"
-import { ThemeProvider } from "@material-ui/core/styles"
+import { ThemeProvider as MaterialThemeProvider } from "@material-ui/core/styles"
+import { ThemeProvider as StyledThemeProvider } from "styled-components"
 import theme from "../../src/theme"
 
 export default function TopLayout(props) {
@@ -18,11 +19,13 @@ export default function TopLayout(props) {
           rel="stylesheet"
         />
       </Helmet>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        {props.children}
-      </ThemeProvider>
+      <MaterialThemeProvider theme={theme}>
+        <StyledThemeProvider theme={theme}>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          {props.children}
+        </StyledThemeProvider>
+      </MaterialThemeProvider>
     </React.Fragment>
   )
 }
