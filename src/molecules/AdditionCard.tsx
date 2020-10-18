@@ -12,10 +12,14 @@ const useStyles = makeStyles({
     justifyContent: "center",
     fontSize: 40,
     color: "primary",
-  }
+  },
 })
 
-const AdditionCard: React.FC = () => {
+type AdditionCardProps = {
+  colorCode: string;
+}
+
+const AdditionCard: React.FC<AdditionCardProps> = ({ colorCode }) => {
   const classes = useStyles()
   return (
     <Grid item>
@@ -25,7 +29,7 @@ const AdditionCard: React.FC = () => {
         link={"/addition/"}
       >
         <Grid item className={classes.media}>
-          <Add style={{ width: 100, height: 100, color: "#1976D2" }} />
+          <Add style={{ width: 100, height: 100, color: colorCode }} />
         </Grid>
       </MyCard>
     </Grid>

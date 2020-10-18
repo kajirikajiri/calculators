@@ -1,9 +1,9 @@
 import React from "react"
-import CalculationOfTheFourPrinciples from "../components/CalculationOfTheFourPrinciples"
+import CalculationOfTheFourPrinciples from "../molecules/CalculationOfTheFourPrinciples"
 
 const mul = (a: number, b: number) => a * b
 
-const Multiplication:React.FC = () => (
+const Multiplication: React.FC = () => (
   <CalculationOfTheFourPrinciples
     calculateFunc={mul}
     calculateString={"×"}

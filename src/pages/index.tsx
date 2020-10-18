@@ -1,22 +1,29 @@
-import React from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import { Layout } from "../components/Layout"
 import { SEO } from "../components/Seo"
-import Grid from "@material-ui/core/Grid"
-import AdditionCard from "../molecules/AdditionCard"
-import SubtractionCard from "../molecules/SubtractionCard"
-import MultiplicationCard from "../molecules/MultiplicationCard"
-import IpAddressCard from '../molecules/IpAddressCard'
+import CardList from "../molecules/CardList"
+import TextField from "@material-ui/core/TextField"
 
 const IndexPage: React.FC = () => {
+  const [searchWord, setSearchWord] = useState("")
+
+  const handler = useCallback(
+    (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+      setSearchWord(_ => e.target.value)
+    },
+    []
+  )
+
   return (
     <Layout>
       <SEO title="Home" />
-      <Grid container justify={"flex-start"} spacing={3}>
-        <AdditionCard />
-        <SubtractionCard/>
-        <MultiplicationCard/>
-        <IpAddressCard/>
-      </Grid>
+      <CardList searchWord={searchWord} />
+      {/* <TextField
+              placeholder={'けんさく'}
+              variant="outlined"
+              value={searchWord}
+              onChange={handler}
+            /> */}
     </Layout>
   )
 }

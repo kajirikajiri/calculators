@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react"
-import { Layout } from "./Layout"
-import { SEO } from "./Seo"
+import { Layout } from "../components/Layout"
+import { SEO } from "../components/Seo"
 import TextField from "@material-ui/core/TextField"
 import { makeStyles } from "@material-ui/core/styles"
 
 type CalculationOfTheFourPrinciples = {
-  calculateFunc: (a: number, b: number) => number
-  seoTitle: string
-  calculateString: string
+  calculateFunc: (a: number, b: number) => number;
+  seoTitle: string;
+  calculateString: string;
 }
 
 const useStyles = makeStyles({

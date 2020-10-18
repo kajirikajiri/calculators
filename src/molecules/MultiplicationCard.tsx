@@ -15,20 +15,26 @@ const useStyles = makeStyles({
   },
 })
 
-const MultiplicationCard: React.FC = () => {
+type MultiplicationCardProps = {
+  colorCode: string;
+}
+
+const MultiplicationCard: React.FC<MultiplicationCardProps> = ({
+  colorCode,
+}) => {
   const classes = useStyles()
   return (
-        <Grid item>
-          <MyCard
-            title={"かけざん"}
-            description={"２つの数のかけざんをします。"}
-            link={"/multiplication/"}
-          >
-            <Grid item className={classes.media}>
-              <Clear style={{ width: 100, height: 100, color: "#F57C00" }} />
-            </Grid>
-          </MyCard>
+    <Grid item>
+      <MyCard
+        title={"かけざん"}
+        description={"２つの数のかけざんをします。"}
+        link={"/multiplication/"}
+      >
+        <Grid item className={classes.media}>
+          <Clear style={{ width: 100, height: 100, color: colorCode }} />
         </Grid>
+      </MyCard>
+    </Grid>
   )
 }
 

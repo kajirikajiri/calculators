@@ -14,20 +14,24 @@ const useStyles = makeStyles({
   },
 })
 
-const IpAddressCard: React.FC = () => {
+type IpAddressCardProps = {
+  colorCode: string;
+}
+
+const IpAddressCard: React.FC<IpAddressCardProps> = ({ colorCode }) => {
   const classes = useStyles()
   return (
-        <Grid item>
-          <MyCard
-            title={"IPアドレス"}
-            description={"IPアドレスを取得します。"}
-            link={"/ipAddress/"}
-          >
-            <Grid item className={classes.media}>
-              <span style={{ fontSize: 80, color: "#C2185B" }}>IP</span>
-            </Grid>
-          </MyCard>
+    <Grid item>
+      <MyCard
+        title={"IPアドレス"}
+        description={"IPアドレスを取得します。"}
+        link={"/ipAddress/"}
+      >
+        <Grid item className={classes.media}>
+          <span style={{ fontSize: 80, color: colorCode }}>IP</span>
         </Grid>
+      </MyCard>
+    </Grid>
   )
 }
 
