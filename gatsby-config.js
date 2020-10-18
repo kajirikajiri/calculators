@@ -5,6 +5,7 @@ module.exports = {
     author: `@kajirikajiri`,
   },
   plugins: [
+    `gatsby-plugin-top-layout`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     {
