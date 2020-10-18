@@ -27,7 +27,7 @@ export const MyCard: React.FC = () => {
 
   return (
     <Link to="/addition/" style={{ textDecoration: "none" }}>
-      <Card className={classes.root}>
+      <Card style={{ maxWidth: 345 }}>
         <CardActionArea>
           <Grid item className={classes.media}>
             <Add style={{ width: 100, height: 100, color: "#1976D2" }} />

@@ -44,7 +44,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         >
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://github.com/kajirikajiri">kajirikajiri</a>
+          <a href="https://github.com/kajirikajiri">@kajirikajiri</a>
         </footer>
       </div>
     </>
