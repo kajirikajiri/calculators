@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core/styles"
 type MyCardProps = {
   title: string
   description: string
-  children: JSX.Element[]
+  children: JSX.Element | JSX.Element[]
 }
 
 const useStyles = makeStyles({
