@@ -10,13 +10,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { Header } from "./header"
 import "./layout.css"
-import CssBaseline from "@material-ui/core/CssBaseline"
-import {
-  ThemeProvider as MaterialThemeProvider,
-  StylesProvider,
-} from "@material-ui/styles"
-import { ThemeProvider as StyledThemeProvider } from "styled-components"
-import theme from "../theme"
 
 type LayoutProps = {
   children: JSX.Element[]
@@ -35,31 +28,25 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <>
-      <MaterialThemeProvider theme={theme}>
-        <StyledThemeProvider theme={theme}>
-          <CssBaseline>
-            <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-            <div
-              style={{
-                margin: `0 auto`,
-                maxWidth: 960,
-                padding: `0 1.0875rem 1.45rem`,
-              }}
-            >
-              <main>{children}</main>
-              <footer
-                style={{
-                  marginTop: `2rem`,
-                }}
-              >
-                © {new Date().getFullYear()}, Built with
-                {` `}
-                <a href="https://github.com/kajirikajiri">@kajirikajiri</a>
-              </footer>
-            </div>
-          </CssBaseline>
-        </StyledThemeProvider>
-      </MaterialThemeProvider>
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <div
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `0 1.0875rem 1.45rem`,
+        }}
+      >
+        <main>{children}</main>
+        <footer
+          style={{
+            marginTop: `2rem`,
+          }}
+        >
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://github.com/kajirikajiri">@kajirikajiri</a>
+        </footer>
+      </div>
     </>
   )
 }
