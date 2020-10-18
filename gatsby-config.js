@@ -1,4 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    title: `けいさん`,
+    description: `いろいろなけいさんをすることができます。`,
+    author: `@kajirikajiri`,
+  },
   plugins: [
     "gatsby-plugin-top-layout",
     `gatsby-plugin-typescript`,
@@ -15,7 +20,4 @@ module.exports = {
     // 'gatsby-plugin-styled-components',
     "gatsby-plugin-react-helmet",
   ],
-  siteMetadata: {
-    title: "My page",
-  },
 }
