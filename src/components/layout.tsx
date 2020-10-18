@@ -35,33 +35,31 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <>
-      <StylesProvider injectFirst>
-        <MaterialThemeProvider theme={theme}>
-          <StyledThemeProvider theme={theme}>
-            <CssBaseline>
-              <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-              <div
+      <MaterialThemeProvider theme={theme}>
+        <StyledThemeProvider theme={theme}>
+          <CssBaseline>
+            <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+            <div
+              style={{
+                margin: `0 auto`,
+                maxWidth: 960,
+                padding: `0 1.0875rem 1.45rem`,
+              }}
+            >
+              <main>{children}</main>
+              <footer
                 style={{
-                  margin: `0 auto`,
-                  maxWidth: 960,
-                  padding: `0 1.0875rem 1.45rem`,
+                  marginTop: `2rem`,
                 }}
               >
-                <main>{children}</main>
-                <footer
-                  style={{
-                    marginTop: `2rem`,
-                  }}
-                >
-                  © {new Date().getFullYear()}, Built with
-                  {` `}
-                  <a href="https://github.com/kajirikajiri">@kajirikajiri</a>
-                </footer>
-              </div>
-            </CssBaseline>
-          </StyledThemeProvider>
-        </MaterialThemeProvider>
-      </StylesProvider>
+                © {new Date().getFullYear()}, Built with
+                {` `}
+                <a href="https://github.com/kajirikajiri">@kajirikajiri</a>
+              </footer>
+            </div>
+          </CssBaseline>
+        </StyledThemeProvider>
+      </MaterialThemeProvider>
     </>
   )
 }
