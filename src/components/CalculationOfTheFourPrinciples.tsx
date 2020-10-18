@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { Layout } from "../components/layout"
-import { SEO } from "../components/seo"
+import { Layout } from "./Layout"
+import { SEO } from "./Seo"
 import TextField from "@material-ui/core/TextField"
 import { makeStyles } from "@material-ui/core/styles"
 

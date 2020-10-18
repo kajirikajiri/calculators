@@ -1,5 +1,5 @@
 import React from "react"
-import { MyCard } from "../molecules/myCard"
+import { MyCard } from "./MyCard"
 import Grid from "@material-ui/core/Grid"
 import { makeStyles } from "@material-ui/core/styles"
 import Add from "@material-ui/icons/Add"
@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     justifyContent: "center",
     fontSize: 40,
     color: "primary",
-  },
+  }
 })
 
 const AdditionCard: React.FC = () => {

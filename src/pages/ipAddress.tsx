@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
-import { Layout } from "../components/layout"
-import { SEO } from "../components/seo"
+import { Layout } from "../components/Layout"
+import { SEO } from "../components/Seo"
 import CircularProgress from "@material-ui/core/CircularProgress"
 
-const IpAddress = () => {
+const IpAddress:React.FC = () => {
   const [data, setData] = useState("")
   const [success, setSuccess] = useState(false)
 

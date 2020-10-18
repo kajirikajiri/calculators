@@ -52,6 +52,8 @@
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "devDependencies": {
-    "husky": "^4.3.0"
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.2",
+    "pretty-quick": "^3.1.0"
   }
 }
