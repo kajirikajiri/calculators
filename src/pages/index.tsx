@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/Grid"
 import { makeStyles } from "@material-ui/core/styles"
 import Add from "@material-ui/icons/Add"
 import Remove from "@material-ui/icons/Remove"
+import Clear from "@material-ui/icons/Clear"
 
 const useStyles = makeStyles({
   root: {
@@ -46,6 +47,17 @@ const IndexPage: React.FC = () => {
           >
             <Grid item className={classes.media}>
               <Remove style={{ width: 100, height: 100, color: "#00796B" }} />
+            </Grid>
+          </MyCard>
+        </Grid>
+        <Grid item>
+          <MyCard
+            title={"かけざん"}
+            description={"２つの数のかけざんをします。"}
+            link={"/multiplication/"}
+          >
+            <Grid item className={classes.media}>
+              <Clear style={{ width: 100, height: 100, color: "#F57C00" }} />
             </Grid>
           </MyCard>
         </Grid>
