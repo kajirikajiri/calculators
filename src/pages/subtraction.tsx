@@ -67,7 +67,6 @@ const Subtraction = () => {
   const handleLeftFocus = (
     e: React.FocusEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => {
-    e.target.scrollIntoView()
     setLeftFocus(true)
   }
 

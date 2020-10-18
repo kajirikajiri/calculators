@@ -67,7 +67,6 @@ const Addition = () => {
   const handleLeftFocus = (
     e: React.FocusEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => {
-    e.target.scrollIntoView()
     setLeftFocus(true)
   }
 
