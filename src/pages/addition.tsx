@@ -3,7 +3,7 @@ import CalculationOfTheFourPrinciples from "../components/CalculationOfTheFourPr
 
 const add = (a: number, b: number) => a + b
 
-const Additio:React.FC = () => (
+const Addition: React.FC = () => (
   <CalculationOfTheFourPrinciples
     calculateFunc={add}
     calculateString={"+"}
