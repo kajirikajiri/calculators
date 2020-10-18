@@ -8,6 +8,7 @@
     "@material-ui/styles": "^4.10.0",
     "@types/react-helmet": "^6.1.0",
     "@types/styled-components": "^5.1.4",
+    "axios": "^0.20.0",
     "gatsby": "^2.24.80",
     "gatsby-image": "^2.4.21",
     "gatsby-plugin-manifest": "^2.4.35",
@@ -49,5 +50,8 @@
     "serve": "gatsby serve",
     "start": "npm run develop",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+  },
+  "devDependencies": {
+    "husky": "^4.3.0"
   }
 }

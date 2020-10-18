@@ -1,17 +1,14 @@
 import React from "react"
 import { Layout } from "../components/layout"
 import { SEO } from "../components/seo"
-import { MyCard } from "../components/myCard"
+import { MyCard } from "../molecules/myCard"
 import Grid from "@material-ui/core/Grid"
 import { makeStyles } from "@material-ui/core/styles"
-import Add from "@material-ui/icons/Add"
 import Remove from "@material-ui/icons/Remove"
 import Clear from "@material-ui/icons/Clear"
+import AdditionCard from "../components/additionCard"
 
 const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
   media: {
     height: 140,
     display: "flex",
@@ -28,17 +25,7 @@ const IndexPage: React.FC = () => {
     <Layout>
       <SEO title="Home" />
       <Grid container justify={"flex-start"} spacing={3}>
-        <Grid item>
-          <MyCard
-            title={"たしざん"}
-            description={"２つの数のたしざんをします。"}
-            link={"/addition/"}
-          >
-            <Grid item className={classes.media}>
-              <Add style={{ width: 100, height: 100, color: "#1976D2" }} />
-            </Grid>
-          </MyCard>
-        </Grid>
+        <AdditionCard />
         <Grid item>
           <MyCard
             title={"ひきざん"}
@@ -58,6 +45,17 @@ const IndexPage: React.FC = () => {
           >
             <Grid item className={classes.media}>
               <Clear style={{ width: 100, height: 100, color: "#F57C00" }} />
+            </Grid>
+          </MyCard>
+        </Grid>
+        <Grid item>
+          <MyCard
+            title={"IPアドレス"}
+            description={"IPアドレスを取得します。"}
+            link={"/ipAddress/"}
+          >
+            <Grid item className={classes.media}>
+              <span style={{ fontSize: 80, color: "#C2185B" }}>IP</span>
             </Grid>
           </MyCard>
         </Grid>

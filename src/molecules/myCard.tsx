@@ -7,10 +7,10 @@ import Typography from "@material-ui/core/Typography"
 import { makeStyles } from "@material-ui/core/styles"
 
 type MyCardProps = {
-  title: string
-  description: string
-  link: string
-  children: JSX.Element | JSX.Element[]
+  title: string;
+  description: string;
+  link: string;
+  children: JSX.Element | JSX.Element[];
 }
 
 const useStyles = makeStyles({
