@@ -9,24 +9,24 @@ import { makeStyles } from "@material-ui/core/styles"
 type MyCardProps = {
   title: string
   description: string
+  link: string
   children: JSX.Element | JSX.Element[]
 }
 
 const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
+  root: { width: 290 },
 })
 
 export const MyCard: React.FC<MyCardProps> = ({
   title,
   description,
+  link,
   children,
 }) => {
   const classes = useStyles()
 
   return (
-    <Link to="/addition/" style={{ textDecoration: "none" }}>
+    <Link to={link} style={{ textDecoration: "none" }}>
       <Card className={classes.root}>
         <CardActionArea>
           <main>{children}</main>

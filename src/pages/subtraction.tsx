@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 
 const errorMessage = "数値のみでお願いします。"
 
-const Addition = () => {
+const Subtraction = () => {
   const classes = useStyles()
 
   const [left, setLeft] = useState<number | "">("")
@@ -100,11 +100,11 @@ const Addition = () => {
     if (left === "" && right === "") {
       setTotal(0)
     } else if (left === "" && right !== "") {
-      setTotal(0 + right)
+      setTotal(0 - right)
     } else if (left !== "" && right === "") {
-      setTotal(left + 0)
+      setTotal(left - 0)
     } else if (left !== "" && right !== "") {
-      setTotal(left + right)
+      setTotal(left - right)
     }
   })
 
@@ -129,7 +129,7 @@ const Addition = () => {
             <span
               style={{ fontSize: 50, margin: "0 10px 0", color: "transparent" }}
             >
-              +
+              ー
             </span>
             <TextField
               placeholder={leftFocus ? "" : "0"}
@@ -158,7 +158,7 @@ const Addition = () => {
               marginBottom: 10,
             }}
           >
-            <span style={{ fontSize: 50, margin: "0 10px 0" }}>+</span>
+            <span style={{ fontSize: 50, margin: "0 10px 0" }}>ー</span>
             <TextField
               placeholder={rightFocus ? "" : "0"}
               InputProps={
@@ -191,4 +191,4 @@ const Addition = () => {
   )
 }
 
-export default Addition
+export default Subtraction
