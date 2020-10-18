@@ -134,7 +134,7 @@ const Addition = () => {
               placeholder={leftFocus ? "" : "0"}
               InputProps={
                 leftFocus
-                  ? { classes: { input: classes.left } }
+                  ? { inputMode: "numeric", classes: { input: classes.left } }
                   : { classes: { input: classes.right } }
               }
               variant="outlined"
@@ -162,7 +162,7 @@ const Addition = () => {
               placeholder={rightFocus ? "" : "0"}
               InputProps={
                 rightFocus
-                  ? { classes: { input: classes.left } }
+                  ? { inputMode: "numeric", classes: { input: classes.left } }
                   : { classes: { input: classes.right } }
               }
               variant="outlined"
