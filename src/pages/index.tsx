@@ -9,21 +9,21 @@ const IndexPage: React.FC = () => {
 
   const handler = useCallback(
     (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-      setSearchWord(_ => e.target.value)
+      setSearchWord(e.target.value)
     },
-    []
+    [searchWord]
   )
 
   return (
     <Layout>
       <SEO title="Home" />
       <CardList searchWord={searchWord} />
-      {/* <TextField
-              placeholder={'けんさく'}
-              variant="outlined"
-              value={searchWord}
-              onChange={handler}
-            /> */}
+      <TextField
+        placeholder={"けんさく"}
+        variant="outlined"
+        value={searchWord}
+        onChange={handler}
+      />
     </Layout>
   )
 }
