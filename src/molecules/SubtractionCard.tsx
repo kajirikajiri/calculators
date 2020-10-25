@@ -22,17 +22,15 @@ type SubtractionCardProps = {
 const SubtractionCard: React.FC<SubtractionCardProps> = ({ colorCode }) => {
   const classes = useStyles()
   return (
-    <Grid item>
-      <MyCard
-        title={"ひきざん"}
-        description={"２つの数のひきざんをします。"}
-        link={"/subtraction/"}
-      >
-        <Grid item className={classes.media}>
-          <Remove style={{ width: 100, height: 100, color: colorCode }} />
-        </Grid>
-      </MyCard>
-    </Grid>
+    <MyCard
+      title={"ひきざん"}
+      description={"２つの数のひきざんをします。"}
+      link={"/subtraction/"}
+    >
+      <Grid item className={classes.media}>
+        <Remove style={{ width: 100, height: 100, color: colorCode }} />
+      </Grid>
+    </MyCard>
   )
 }
 

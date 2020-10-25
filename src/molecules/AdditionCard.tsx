@@ -22,17 +22,15 @@ type AdditionCardProps = {
 const AdditionCard: React.FC<AdditionCardProps> = ({ colorCode }) => {
   const classes = useStyles()
   return (
-    <Grid item>
-      <MyCard
-        title={"たしざん"}
-        description={"２つの数のたしざんをします。"}
-        link={"/addition/"}
-      >
-        <Grid item className={classes.media}>
-          <Add style={{ width: 100, height: 100, color: colorCode }} />
-        </Grid>
-      </MyCard>
-    </Grid>
+    <MyCard
+      title={"たしざん"}
+      description={"２つの数のたしざんをします。"}
+      link={"/addition/"}
+    >
+      <Grid item className={classes.media}>
+        <Add style={{ width: 100, height: 100, color: colorCode }} />
+      </Grid>
+    </MyCard>
   )
 }
 

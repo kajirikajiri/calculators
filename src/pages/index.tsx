@@ -9,7 +9,11 @@ import { tagsAndCard } from "../scripts/tagsAndCard"
 const IndexPage: React.FC = () => {
   const cards = tagsAndCard.map((obj, i) => {
     const n = (i + 1) % 17
-    return { card: obj.card({ colorCode: iconColors[n] }), tags: obj.tags }
+    return {
+      card: obj.card({ colorCode: iconColors[n] }),
+      tags: obj.tags,
+      id: obj.id,
+    }
   })
 
   const [render, setRender] = useState(cards)
@@ -21,7 +25,7 @@ const IndexPage: React.FC = () => {
       } else {
         const result = cards.filter(obj => {
           return obj.tags.some(tag => {
-            return tag.indexOf(e.target.value) > -1
+            return tag.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1
           })
         })
         setRender(result)
@@ -33,11 +37,16 @@ const IndexPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <TextField
-        placeholder={"けんさく"}
-        variant="outlined"
-        onChange={handler}
-      />
+      <div style={{ display: "flex", alignItems: "center", marginBottom: 20 }}>
+        <TextField
+          placeholder={"けんさく"}
+          variant="outlined"
+          onChange={handler}
+        />
+        <div style={{ marginLeft: 10 }}>
+          <span style={{ fontSize: 25 }}>{render.length}</span>件見つかりました
+        </div>
+      </div>
       <CardList cards={render} />
     </Layout>
   )
